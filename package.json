@@ -19,7 +19,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "btc-converter": "bin/main.js"
+    "cli-dictionary": "bin/main.js"
   },
   "repository": {
     "type": "git",
