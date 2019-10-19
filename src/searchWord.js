@@ -10,7 +10,9 @@ function searchWord(word = "love") {
       if (response.ok) return response.json();
       throw new Error();
     })
-    .then(response => console.log(response.definitions[0].definition))
+    .then(response =>
+      console.log(`${word}: ${response.definitions[0].definition}`)
+    )
     .catch(error => {
       console.log("something went wrong, try again.");
       throw error;

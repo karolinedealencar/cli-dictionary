@@ -7,7 +7,7 @@ global.console = {
 test("should return love definition as default", async () => {
   return searchWord().then(() => {
     expect(global.console.log).toHaveBeenCalledWith(
-      "a strong feeling of affection."
+      "love: a strong feeling of affection."
     );
   });
 });
