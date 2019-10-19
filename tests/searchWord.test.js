@@ -5,12 +5,11 @@ global.console = {
 };
 
 test("should return love definition as default", async () => {
-  try {
-    await searchWord();
+  return searchWord().then(() => {
     expect(global.console.log).toHaveBeenCalledWith(
       "a strong feeling of affection."
     );
-  } catch {}
+  });
 });
 
 test("should return error message when api fails", () => {
