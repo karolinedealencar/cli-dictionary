@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
 const ora = require("ora");
+const chalk = require("chalk");
 
 const spinner = ora({
   text: "Loading definition..."
@@ -19,7 +20,7 @@ function searchWord(word = "love") {
     })
     .then(response => {
       spinner.stop();
-      console.log(`${word}: ${response.definitions[0].definition}`);
+      console.log(`${chalk.cyan(word)}: ${response.definitions[0].definition}`);
     })
     .catch(error => {
       spinner.stop();

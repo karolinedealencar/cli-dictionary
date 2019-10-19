@@ -1,4 +1,5 @@
 const searchWord = require("../src/searchWord");
+const chalk = require("chalk");
 
 global.console = {
   log: jest.fn()
@@ -7,7 +8,7 @@ global.console = {
 test("should return love definition as default", async () => {
   return searchWord().then(() => {
     expect(global.console.log).toHaveBeenCalledWith(
-      "love: a strong feeling of affection."
+      `${chalk.cyan("love")}: a strong feeling of affection.`
     );
   });
 });
