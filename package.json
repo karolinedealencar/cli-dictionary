@@ -1,0 +1,33 @@
+{
+  "name": "cli-dictionary",
+  "version": "1.0.0",
+  "description": "A CLI that shows the definition of a word.",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel.js src --out-dir bin",
+    "test": "jest"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "btc-converter": "bin/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolinedealencar/cli-dictionary.git"
+  },
+  "author": "Karoline Alencar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karolinedealencar/cli-dictionary/issues"
+  },
+  "homepage": "https://github.com/karolinedealencar/cli-dictionary#readme"
+}
